@@ -20,6 +20,8 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
         cache: maven
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
     - name: Build and Publish Artifacts with Maven
       run: mvn clean install mkdir -p ${{ github.workspace }}/artifacts cp target/*.jar ${{ github.workspace }}/artifacts  
       # Publish artifacts 
