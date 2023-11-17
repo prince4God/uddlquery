@@ -22,11 +22,10 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: Build and Publish Artifacts with Maven
-      run: mvn clean install mkdir -p ${{ github.workspace }}/artifacts cp target/*.jar ${{ github.workspace }}/artifacts  
+    
       # Publish artifacts 
     - name: Publish Artifacts 
-      uses: actions/upload-artifact@v2 
+      uses: actions/upload-artifact@v3
       with: 
         name: my-artifacts 
         path: ${{ github.workspace }}/artifacts
