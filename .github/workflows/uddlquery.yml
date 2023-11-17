@@ -24,8 +24,9 @@ jobs:
       run: mvn -B package --file pom.xml
     
       # Publish artifacts 
-    - name: Publish Artifacts 
-      uses: actions/upload-artifact@v3
-      with: 
-        name: my-artifacts 
-        path: ${{ github.workspace }}/artifacts
+    #- name: Publish Artifacts 
+     # uses: actions/upload-artifact@v3
+     # with: 
+       
+       # name: my-artifacts 
+      #  path: ${{ github.workspace }}/artifacts
